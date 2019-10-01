@@ -1,0 +1,9 @@
+process.stdin.resume()
+process.stdin.setEncoding('utf8')
+
+console.log('How old are you? ? ')
+process.stdin.on('data', (text) => {
+  let years= 2019 - text
+  console.log('Was born in  ' + years)
+  process.exit()
+})
