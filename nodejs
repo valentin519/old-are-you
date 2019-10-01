@@ -3,13 +3,20 @@ process.stdin.setEncoding('utf8')
 
 console.log('How old are you? ? ')
 process.stdin.on('data', (text) => {
-  if (isNaN(text)||text>99){
-    console.log('oho you are old ,head to the nearest funeral parlor ')
+  if (text >99 ){
+    console.log('oho you are old ,head to the nearest funeral parlor ');
     process.exit()
-  }else {
+  }if (isNaN(text)){
+    console.log('hum I asked you your age and nothing else please ');
+    process.exit()
+  }if (text <= 0){
+  console.log('ahahahah not bad try again');
+  process.exit()
+
+}else {
 
 let years= 2019 - text
-  console.log('Was born in  ' + years)
+  console.log('Was born in  ' + years);
   process.exit()
 }
 })
