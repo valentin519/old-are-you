@@ -3,8 +3,8 @@ process.stdin.setEncoding('utf8')
 
 console.log('How old are you? ? ')
 process.stdin.on('data', (text) => {
-  if (text > 100){
-    console.log('oho you are old ')
+  if (isNaN(text)||text>99){
+    console.log('oho you are old ,head to the nearest funeral parlor ')
     process.exit()
   }else {
 
